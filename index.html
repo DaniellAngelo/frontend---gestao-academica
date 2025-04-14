@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestão Acadêmica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Gestão Acadêmica</h1>
+  
+  <div class="tabs">
+    <button onclick="showTab('aluno')">Alunos</button>
+    <button onclick="showTab('disciplina')">Disciplinas</button>
+    <button onclick="showTab('nota')">Notas</button>
+  </div>
+
+  <div id="aluno" class="tab-content">
+    <h2>Cadastro de Aluno</h2>
+    <input type="text" id="aluno-nome" placeholder="Nome do aluno">
+    <input type="text" id="aluno-matricula" placeholder="Matrícula">
+    <button onclick="cadastrarAluno()">Cadastrar</button>
+    <ul id="lista-alunos"></ul>
+  </div>
+
+  <div id="disciplina" class="tab-content" style="display:none">
+    <h2>Cadastro de Disciplina</h2>
+    <input type="text" id="disciplina-nome" placeholder="Nome da disciplina">
+    <input type="text" id="disciplina-codigo" placeholder="Código da disciplina">
+    <button onclick="cadastrarDisciplina()">Cadastrar</button>
+    <ul id="lista-disciplinas"></ul>
+  </div>
+
+  <div id="nota" class="tab-content" style="display:none">
+    <h2>Cadastro de Nota</h2>
+    <input type="number" id="nota-aluno-id" placeholder="ID do Aluno">
+    <input type="number" id="nota-disciplina-id" placeholder="ID da Disciplina">
+    <input type="number" id="nota-valor" placeholder="Nota" step="0.1">
+    <button onclick="cadastrarNota()">Cadastrar</button>
+    <ul id="lista-notas"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
